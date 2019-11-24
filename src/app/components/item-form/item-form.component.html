@@ -1,0 +1,21 @@
+<mat-card>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Title"
+        [(ngModel)]="item.title"
+        name="title">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        placeholder="Description"
+        [(ngModel)]="item.description"
+        name="description"
+        >
+      </textarea>
+    </mat-form-field>
+    <button color="primary" mat-raised-button>Add</button>
+  </form>
+</mat-card>

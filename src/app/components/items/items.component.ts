@@ -19,4 +19,8 @@ export class ItemsComponent implements OnInit {
       this.items = items;
     });
   }
+
+  deleteItem(event, item) {
+    this.itemsService.deleteItem(item);
+  }
 }
