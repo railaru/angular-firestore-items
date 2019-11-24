@@ -1,20 +1,22 @@
 <mat-progress-bar *ngIf="!items" mode="indeterminate"></mat-progress-bar>
 
-<mat-list *ngIf="items">
-  <mat-list-item
-    *ngFor="let item of items"
-    (dblclick)="deleteItem($event, item)"
-    >
-    <button mat-icon-button aria-label="Example icon-button with a heart icon">
-      <mat-icon>edit</mat-icon>
-    </button>
-    <h3 matLine>
-      <strong>
-        {{item.title}}
-      </strong>
-    </h3>
-    <p matLine>
-      {{item.description}}
-    </p>
-  </mat-list-item>
-</mat-list>
+<mat-card>
+  <mat-list *ngIf="items">
+    <mat-list-item *ngFor="let item of items">
+      <button mat-icon-button aria-label="icon-button">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="icon-button" (click)="deleteItem($event, item)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <h3 matLine>
+        <strong>
+          {{item.title}}
+        </strong>
+      </h3>
+      <p matLine>
+        {{item.description}}
+      </p>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
