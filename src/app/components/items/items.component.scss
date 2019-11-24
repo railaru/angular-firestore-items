@@ -1,0 +1,7 @@
+mat-list-item {
+  border-left: #d3d3d3 solid 1px;
+  border-bottom: #d3d3d3 solid 1px;
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
